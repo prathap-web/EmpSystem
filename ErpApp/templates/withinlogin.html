@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title%} login details  {% endblock %}
+
+{% block body %}
+
+
+
+<table class="table">
+        <thead class="thead-dark">
+        
+        <tr>
+        
+                <th scope="col"> FullName </th>
+                <th scope="col"> E - mail </th>
+                <th scope="col"> Password </th>
+                <th scope="col"> &nbsp  &nbsp  &nbsp Logintime</th>
+        </tr>
+        </thead>
+
+        {% for item in context %}
+        <hbody>
+        <tr>
+                <td> {{ item.fullname }} </td>
+                <td> {{ item.email }} </td>
+                <td> {{item.password}} </td>
+                <td>  &nbsp  &nbsp  &nbsp  &nbsp {{item.logintime}} </td>
+        </tr>
+        </hbody>
+
+        {% endfor %}
+
+</table>
+{% endblock %} 
+{% block js%}
+{% endblock %}
